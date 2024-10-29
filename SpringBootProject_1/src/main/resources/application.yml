@@ -1,0 +1,25 @@
+# properties => yml
+
+# port 결정
+# server.port=80
+server:
+  port: 80
+# database <bean id="ds">
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:XE
+    username: hr
+    password: happy
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  thymeleaf:
+    prefix: classpath:templates/
+    suffix: .html
+    cache: false
+    encoding: UTF-8
+    mode: HTML
+#mybatis => SqlSessionFactory
+mybatis:
+  config: classpath:config.xml
+  type-aliases-package: com.sist.web.vo
+  mapper-locations: classpath:mapper/**/*.xml
+#jpa

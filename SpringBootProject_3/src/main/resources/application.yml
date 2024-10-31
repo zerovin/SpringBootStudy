@@ -26,6 +26,8 @@ spring:
     prefix: classpath:templates/
     suffix: .html
     mode: HTML
+  elasticsearch:
+    uris: localhost:9200
 #log file
 logging:
   level:

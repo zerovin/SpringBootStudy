@@ -87,6 +87,13 @@ public class FoodHouseRestController {
 			map.put("totalpage", totalpage);
 			map.put("startpage", startpage);
 			map.put("endpage", endpage);
+			//map {}로 받아야함
+			/*
+			 *	return
+			 *  => Map {} 여러개를 동시에 모아서 전송
+			 *  => List [{],{},{}...] 
+			 *  => VO {}
+			 */
 		}catch(Exception ex) {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 			// 404, 500, 415, 405, 400

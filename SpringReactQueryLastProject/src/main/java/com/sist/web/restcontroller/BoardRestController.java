@@ -96,6 +96,7 @@ public class BoardRestController {
 	}
 	
 	//삭제 => DeleteMapping
+	//@GetMapping("/board/delete/{no}/{pwd}")
 	@DeleteMapping("/board/delete/{no}/{pwd}")
 	public ResponseEntity<Map> board_delete(@PathVariable("no") int no, @PathVariable("pwd") String pwd){
 		Map map=new HashMap();
